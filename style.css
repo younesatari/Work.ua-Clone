@@ -111,6 +111,7 @@ a {
    align-items: flex-start;
    justify-content: center;
    position: fixed;
+   z-index: 1000;
 }
 
 .dropdown-content .active {
@@ -173,6 +174,24 @@ a {
 
 .search {
    margin-top: 2rem;
+   position: relative;
+}
+
+/* Clouds and the flying man */
+.cloud {
+   position: absolute;
+   right:0;
+   bottom:10px;
+   width:300px;
+   z-index:0;
+}
+
+.flying-man {
+   position: absolute;
+   z-index: 1;
+   width:100px;
+   right:150px;
+   bottom: 30px;
 }
 
 .search .description {
@@ -189,6 +208,8 @@ a {
    align-items: center;
    justify-content: space-between;
    margin-bottom: .5rem;
+   position: relative;
+   z-index: 5;
 }
 
 .form-control {
