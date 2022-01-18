@@ -276,11 +276,112 @@ a {
    text-decoration: none;
 }
 
+/* Section1 */
+.section1-inner {
+   background: var(--light);
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   align-items: center;
+   justify-content: center;
+   border:1px solid rgba(0, 0, 0, .1);
+}
+
+.section1-inner .border-right{
+   border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.section1-item:last-child {
+   display: none;
+}
+
+.section1-item {
+   padding:3rem .1rem;
+}
+
+.section1-item {
+   padding:3rem .5rem;
+   margin: 0 .1rem;
+   text-align: center;
+}
+
+.section1-item a {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.section1-item div {
+   color:var(--dark-blue);
+   font-size: 1rem;
+}
+
+.section1-item div:hover {
+   text-decoration: underline;
+}
+
+.section1-item a:hover i {
+   text-decoration: none;
+   color:#e42469;
+}
+
+.section1-item i {
+   font-size: 2.3rem;
+   color:#6b7886;
+   margin-right: .5rem;
+}
+
+/* Section2 */
+.section2-inner {
+   background-color: var(--light);
+   padding:2rem;
+   border:1px solid rgba(0, 0, 0, .1);
+}
+
+.companies {
+   display: grid;
+   grid-template-columns: repeat(6,1fr);
+}
+.companies li {
+   padding: 1rem;
+   transition: transform .1s ease-in;
+}
+
+.companies li:hover {
+   transform: translateY(-4px);
+}
+
+.section2-item {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+
+.section2-item a {
+   color: var(--dark-blue);
+   font-size: 1rem;
+}
+
+.section2-item a:hover {
+   text-decoration: underline;
+}
+
+.section2-item i {
+   margin-left: .3rem;
+}
+
+
+
+
 
 
 
 
 /* Media Queries */
+@media screen and (max-width:900px) {
+   .companies {
+      grid-template-columns: repeat(5,1fr);
+   }
+}
 @media screen and (max-width:700px) {
    .navs {
       padding-bottom: 2rem;
@@ -308,6 +409,39 @@ a {
 
    .search .left {
       margin-right: 0;
+   }
+
+   .section1-inner {
+      grid-template-columns: 1fr;
+   }
+    
+   .section1-item:last-child {
+      display: block;
+   }
+
+   .section1-item {
+      border-right:none !important; 
+      padding: 1rem;
+   }
+
+   .bm {
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+   }
+
+   .section1-item a {
+      justify-content: flex-start;
+   }
+
+   .section1-item i {
+      font-size: 1.5rem;
+   }
+
+   .section1-item div {
+      font-size: 1rem;
+   }
+
+   .companies {
+      grid-template-columns: repeat(4,1fr);
    }
 }
 
@@ -347,6 +481,10 @@ a {
    }
 
    .end-links {
+      display: none;
+   }
+
+   #section2 {
       display: none;
    }
 }
